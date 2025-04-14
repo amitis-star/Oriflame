@@ -23,11 +23,11 @@ import IconOfOurTime from "../assests/images/icon of our time.webp";
 import MilkandHoney from "../assests/images/milk and honey gold.webp";
 import TenderCare from "../assests/images/tender care.webp";
 import RoyalVelvet from "../assests/images/royal velvet.webp";
-import BestOfferCover from "../assests/images/best offer cover.webp"
+import BestOfferCover from "../assests/images/best offer cover.webp";
 import AmberElixer from "../assests/images/amber elixer.webp";
 import FacialOil from "../assests/images/facial oil.webp";
 import LipBalm from "../assests/images/lip balm.webp";
-import Possess from "../assests/images/possess.webp"
+import Possess from "../assests/images/possess.webp";
 import { FaRegHeart } from "react-icons/fa";
 
 const Home = () => {
@@ -622,7 +622,7 @@ const Home = () => {
                   <span className="text-12 text-gray-700">(352)</span>
                 </div>
                 <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
-                    possess
+                  possess
                 </p>
                 <div className=" text-14 text-gray-900 font-400">
                   Absolute Eau de Parfum
@@ -666,7 +666,7 @@ const Home = () => {
                   Natural Multi-purpose Balm
                 </div>
                 <div className="h-5 flex items-center gap-4 mt-3">
-                <p className="text-orange-600 font-500">£3.49</p>
+                  <p className="text-orange-600 font-500">£3.49</p>
                   <span className="line-through text-gray-400 font-100">
                     £8.50
                   </span>
@@ -750,22 +750,37 @@ const Home = () => {
               </div>
             </div>
             <div className="relative w-1/5 h-full">
-              <img
-                src={BestOfferCover}
-                alt=""
-                className="h-full rounded-md"
-              />
+              <img src={BestOfferCover} alt="" className="h-full rounded-md" />
               <div className="w-full h-35 absolute py-7.5 px-10 bottom-0 flex flex-col justify-between gap-y-2">
-                <p className="w-33 h-20 text-center text-30 mb-1 font-500 text-gray-100">BEST RIGHT NOW</p>
+                <p className="w-33 h-20 text-center text-30 mb-1 font-500 text-gray-100">
+                  BEST RIGHT NOW
+                </p>
                 <button
-                type="btn"
-                className="w-33 h-12 bg-black rounded-full text-gray-100 font-500 text-16"
+                  type="btn"
+                  className="w-33 h-12 bg-black rounded-full text-gray-100 font-500 text-16"
                 >
                   SEIZE THE DEALS
                 </button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* oriflame on me */}
+      <div className="w-full h-17 mb-10">
+        <div className="w-[1346px] h-full mx-22">
+          <div className="h-12 flex-col items-center justify-between mx-auto relative">
+            <h3 className="text-40 font-500 text-gray-800 flex justify-center items-center">
+              #OriflameOnMe
+            </h3>
+            <button
+              type="btn"
+              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute bottom-0 font-500 leading-3 right-0 top-2"
+            >
+              View all
+            </button>
+          </div>
+          <p className="mb-10 font-300 text-12 text-gray-700 text-center mt-5">Share your amazinig looks with <span className="font-700">@oriflame</span> and <span className="font-900">#Oriflame On Me</span></p>
         </div>
       </div>
       {/* body end */}
