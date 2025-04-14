@@ -28,6 +28,7 @@ import AmberElixer from "../assests/images/amber elixer.webp";
 import FacialOil from "../assests/images/facial oil.webp";
 import LipBalm from "../assests/images/lip balm.webp";
 import Possess from "../assests/images/possess.webp";
+import Healthy from "../assests/images/healthier gut, happier day.webp";
 import { FaRegHeart } from "react-icons/fa";
 
 const Home = () => {
@@ -153,7 +154,7 @@ const Home = () => {
                 </h3>
                 <button
                   type="button"
-                  className="w-31 h-12 bg-black rounded-full text-white"
+                  className="w-31 h-12 bg-black rounded-full text-white hover:bg-gray-500"
                 >
                   Discover now
                 </button>
@@ -172,7 +173,7 @@ const Home = () => {
                 </h3>
                 <button
                   type="button"
-                  className="w-31 h-12 bg-black rounded-full text-white"
+                  className="w-31 h-12 bg-black rounded-full text-white hover:bg-gray-500"
                 >
                   Shop now
                 </button>
@@ -186,12 +187,12 @@ const Home = () => {
                 <p className="text-12 font-500 text-gray-700">
                   NEW! EXPERIENCE OPTIMALS HYDRA
                 </p>
-                <h3 className="text-50 w-63 h-29 mb-4 text-gray-700 font-500">
+                <h3 className="text-50 w-63 h-29 mb-4 text-gray-700 font-500 ">
                   1-2-3 to amazing skin!
                 </h3>
                 <button
                   type="button"
-                  className="w-31 h-12 bg-black rounded-full text-white"
+                  className="w-31 h-12 bg-black rounded-full text-white hover:bg-gray-500"
                 >
                   Shop now
                 </button>
@@ -221,7 +222,7 @@ const Home = () => {
             <h3 className="text-40 font-500 text-gray-800">What's new</h3>
             <button
               type="btn"
-              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute right-0 font-500 leading-3"
+              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute right-0 font-500 leading-3 hover:bg-gray-200"
             >
               View all
             </button>
@@ -233,7 +234,7 @@ const Home = () => {
                 alt="what's new"
                 className="h-55  rounded-lg"
               />
-              <button className="w-36 h-12 rounded-full bg-black text-white font-500 absolute bottom-8 left-33 hover:bg-gray-600">
+              <button className="w-36 h-12 rounded-full bg-black text-white font-500 absolute bottom-8 left-33 hover:bg-gray-500">
                 BROWSE ECATALOGUE
               </button>
             </div>
@@ -381,7 +382,7 @@ const Home = () => {
             </div>
             <button
               type="btn"
-              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute right-0 bottom-0 font-500 leading-3"
+              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute right-0 bottom-0 font-500 leading-3 hover:bg-gray-200"
             >
               View all
             </button>
@@ -573,7 +574,7 @@ const Home = () => {
             </div>
             <button
               type="btn"
-              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute bottom-0 font-500 leading-3"
+              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute bottom-0 font-500 leading-3 hover:bg-gray-200"
             >
               View all
             </button>
@@ -757,7 +758,7 @@ const Home = () => {
                 </p>
                 <button
                   type="btn"
-                  className="w-33 h-12 bg-black rounded-full text-gray-100 font-500 text-16"
+                  className="w-33 h-12 bg-black rounded-full text-gray-100 font-500 text-16 hover:bg-gray-500"
                 >
                   SEIZE THE DEALS
                 </button>
@@ -775,12 +776,153 @@ const Home = () => {
             </h3>
             <button
               type="btn"
-              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute bottom-0 font-500 leading-3 right-0 top-2"
+              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute bottom-0 font-500 leading-3 right-0 top-2 hover:bg-gray-200"
             >
               View all
             </button>
           </div>
-          <p className="mb-10 font-300 text-12 text-gray-700 text-center mt-5">Share your amazinig looks with <span className="font-700">@oriflame</span> and <span className="font-900">#Oriflame On Me</span></p>
+          <p className="mb-10 font-300 text-12 text-gray-700 text-center mt-5">
+            Share your amazinig looks with{" "}
+            <span className="font-700">@oriflame</span> and{" "}
+            <span className="font-900">#Oriflame On Me</span>
+          </p>
+        </div>
+      </div>
+      {/* swiper oriflame on me */}
+      <div className="mt-10 mb-10 bg-purple-800 h-3 w-full"></div>
+      {/* healtier gut, happier day */}
+      <div className="w-full flex justify-center mb-15">
+        <div className="w-[1346px] h-full mx-22">
+          <div className=" felx justify-center items-center relative mb-10">
+            <div className="w-[600px] h-full flex-col items-center justify-between mx-auto">
+              <h3 className="text-40 font-700 text-gray-800 flex justify-center items-center mb-3">
+                Healthier gut, happier day
+              </h3>
+              <p className="text-center text-gray-700 font-100 text-14">
+                A healthy and diverse gut microbiome impacts health in many
+                ways, including the immune system, metabolism, appetite and
+                emotions. Support yours by combining probiotics (the good
+                bacteria needed in your gut) and prebiotics (food that the good
+                bacteria needs to thrive).
+              </p>
+            </div>
+            <button
+              type="btn"
+              className="w-29 h-11 rounded-full py-3 text-black text-14 border-gray-800 border-solid border-2 absolute right-0 bottom-0 font-500 leading-3 hover:bg-gray-200"
+            >
+              LEARN HOW
+            </button>
+          </div>
+          <div className="flex justify-between items-center h-[455px] gap-5">
+            <div className="relative w-2/4 h-full">
+              <img src={Healthy} alt="" className="h-full rounded-md" />
+              <div className="w-full h-30 absolute py-7.5 px-10 bottom-0 flex flex-col  items-center">
+                <p className="w-53 text-center text-30 mb-1 font-500 text-gray-100">
+                  Forget tummy trouble
+                </p>
+                <button
+                  type="btn"
+                  className="w-33 h-12 bg-black rounded-full text-gray-100 font-500 text-16 hover:bg-gray-500"
+                >
+                  LEARN HOW
+                </button>
+              </div>
+            </div>
+            <div className="w-3/4 h-full grid grid-cols-3 gap-x-5">
+              <div className="h-full  bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer m-auto">
+                  <img
+                    src={TheOneWhatsNew}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
+                    New
+                  </span>
+                  <div
+                    className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl"
+                    onMouseEnter={() => setIsStoreHovered(true)}
+                    onMouseLeave={() => setIsStoreHovered(false)}
+                  >
+                    <img
+                      src={isStoreHovered ? BlackStore : StoreIcon}
+                      alt="store"
+                      className="w-7 h-7 transition-colors duration-300"
+                    />
+                  </div>
+                  <div
+                    className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl"
+                    onMouseEnter={() => setIsHeartHovered(true)}
+                    onMouseLeave={() => setIsHeartHovered(false)}
+                  >
+                    <img
+                      src={isHeartHovered ? PinkHeart : Heart}
+                      alt="heart"
+                      className="w-7 h-7 transition-colors duration-300"
+                    />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(1)</span>
+                </div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  THE ONES
+                </p>
+                <div className="h-10 text-14 text-gray-900 font-400">
+                  5 in 1 Wonder Lash Prom Queen Mascara - Black
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£6.99</p>
+                  <span className="line-through text-gray-400 font-100">
+                    £13.00
+                  </span>
+                </div>
+              </div>
+              <div className="h-full  bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer m-auto">
+                  <img
+                    src={MilkandHoney}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" />
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <FaRegHeart size={24} className="hover:text-red-900" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(672)</span>
+                </div>
+                <p className=" text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  MILK & HONEY GOLD
+                </p>
+                <div className=" text-14 text-gray-900 font-400">
+                  Nourishing Hand & Body Cream
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£12.99</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {/* body end */}
