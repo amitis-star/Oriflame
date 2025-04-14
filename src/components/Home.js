@@ -29,6 +29,10 @@ import FacialOil from "../assests/images/facial oil.webp";
 import LipBalm from "../assests/images/lip balm.webp";
 import Possess from "../assests/images/possess.webp";
 import Healthy from "../assests/images/healthier gut, happier day.webp";
+import TheOneBrand from "../assests/images/the one.webp";
+import GiordaniGoldBrand from "../assests/images/giordani gold.webp";
+import NoageBrand from "../assests/images/novage.webp";
+import WillosophyBrand from "../assests/images/wllosophy.webp";
 import { FaRegHeart } from "react-icons/fa";
 
 const Home = () => {
@@ -927,7 +931,9 @@ const Home = () => {
       </div>
       {/* reach your happy place */}
       <div className="w-full h-55 py-12.5 px-4 flex flex-col justify-between gap-y-5 items-center">
-        <h3 className="text-40 text-gray-700 font-700">Reach your happy place</h3>
+        <h3 className="text-40 text-gray-700 font-700">
+          Reach your happy place
+        </h3>
         <span className="text-14 text-gray-500 font-400 w-[600px] h-32 text-center">
           The art of living well, it’s personal. We believe true wellbeing feels
           different to everyone – and let’s be honest, it often means different
@@ -942,6 +948,38 @@ const Home = () => {
           can enjoy the ride. Because happiness looks good on everyone!{" "}
         </span>
         <div className="w-22 h-0 bg-blue-400"></div>
+      </div>
+      {/* our top brands*/}
+      <div className="w-full h-[433px] py-12.5 px-4 flex flex-col justify-between gap-y-5 items-center">
+        <h3 className="text-40 text-gray-700 font-700">Our top brands</h3>
+        <div className="w-[950px] h-35 flex justify-evenly items-center">
+          <img
+            src={GiordaniGoldBrand}
+            alt="brand"
+            className="w-35 h-35 rounded-full"
+          />
+          <img
+            src={NoageBrand}
+            alt="brand"
+            className="w-35 h-35 rounded-full"
+          />
+          <img
+            src={TheOneBrand}
+            alt="brand"
+            className="w-35 h-35 rounded-full"
+          />
+          <img
+            src={WillosophyBrand}
+            alt="brand"
+            className="w-35 h-35 rounded-full"
+          />
+        </div>
+        <button
+          type="btn"
+          className="w-29 h-11 rounded-full py-3 text-black text-14 border-gray-800 border-solid border-2 font-500 leading-3 hover:bg-gray-200"
+        >
+          LEARN HOW
+        </button>
       </div>
       {/* body end */}
     </div>
