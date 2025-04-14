@@ -17,6 +17,10 @@ import WhatsNew from "../assests/images/what's-new.webp";
 import OptWhatsNew from "../assests/images/opt-whats-new.webp";
 import OptWhatsNew2 from "../assests/images/opt-whats-new-2.webp";
 import TheOneWhatsNew from "../assests/images/theone-whats-new.webp";
+import IconOfOurTime from "../assests/images/icon of our time.webp";
+import MilkandHoney from "../assests/images/milk and honey gold.webp";
+import TenderCare from "../assests/images/tender care.webp";
+import RoyalVelvet from "../assests/images/royal velvet.webp";
 
 const Home = () => {
   const inputRef = useRef(null);
@@ -118,6 +122,7 @@ const Home = () => {
       <div className="w-full h-0.1 bg-gray-200"></div>
       {/* header end */}
       {/* body start */}
+      {/* swiper */}
       <div className="w-full h-68 bg-red-200 flex items-center justify-center">
         <Swiper
           modules={[Autoplay]}
@@ -184,6 +189,7 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+      {/* list items */}
       <div className="w-full h-13 flex justify-center items-center gap-7">
         <button className="text-14 text-gray-800 font-600">ECATALOGUE</button>
         <button className="text-14 text-gray-800 font-600">NUTRITION</button>
@@ -196,10 +202,9 @@ const Home = () => {
         <button className="text-14 text-gray-800 font-600">MEN</button>
         <button className="text-14 text-gray-800 font-600">KIDS & BABY</button>
       </div>
+      {/* what's new */}
       <div className="w-full h-0.1 bg-gray-200 mb-15"></div>
-      <div className="w-full h-64.5 flex justify-center mb-40">
-        {" "}
-        {/* remove mb-40 */}
+      <div className="w-full h-64.5 flex justify-center mb-15">
         <div className="w-[1346px] h-full mx-7">
           <div className="w-[1346px] h-13 mb-7 relative flex items-center justify-center">
             <h3 className="text-40 font-500 text-gray-800">What's new</h3>
@@ -224,7 +229,11 @@ const Home = () => {
             <div className="h-full w-[721px] flex justify-between items-center">
               <div className="w-39.3 h-full bg-gray-100">
                 <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
-                  <img src={OptWhatsNew} alt="opt" className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" />
+                  <img
+                    src={OptWhatsNew}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
                   <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
                     New
                   </span>
@@ -238,24 +247,34 @@ const Home = () => {
                 <div className="w-full h-5 py-0 px-2.5"></div>
                 <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
                   <div className="flex justify-end items-center">
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5"/>
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
                   </div>
                   <span className="text-12 text-gray-700">(1)</span>
                 </div>
-                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">OPTIMALS</p>
-                <div className="h-10 text-14 text-gray-900 font-400">Opt Optimals Daily Glow Multi-Protector SPF50</div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  OPTIMALS
+                </p>
+                <div className="h-10 text-14 text-gray-900 font-400">
+                  Opt Optimals Daily Glow Multi-Protector SPF50
+                </div>
                 <div className="h-5 flex items-center gap-4 mt-3">
                   <p className="text-orange-600 font-500">£12.99</p>
-                  <span className="line-through text-gray-400 font-100">£20.00</span>
+                  <span className="line-through text-gray-400 font-100">
+                    £20.00
+                  </span>
                 </div>
               </div>
               <div className="w-39.3 h-full bg-gray-100">
                 <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
-                  <img src={OptWhatsNew2} alt="opt" className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" />
+                  <img
+                    src={OptWhatsNew2}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
                   <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
                     New
                   </span>
@@ -269,24 +288,34 @@ const Home = () => {
                 <div className="w-full h-5 py-0 px-2.5"></div>
                 <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
                   <div className="flex justify-end items-center">
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5"/>
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
                   </div>
                   <span className="text-12 text-gray-700">(0)</span>
                 </div>
-                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">OPTIMALS</p>
-                <div className="h-10 text-14 text-gray-900 font-400">Opt Optimals Hydra Radiance Rich Cream</div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  OPTIMALS
+                </p>
+                <div className="h-10 text-14 text-gray-900 font-400">
+                  Opt Optimals Hydra Radiance Rich Cream
+                </div>
                 <div className="h-5 flex items-center gap-4 mt-3">
                   <p className="text-orange-600 font-500">£12.99</p>
-                  <span className="line-through text-gray-400 font-100">£17.00</span>
+                  <span className="line-through text-gray-400 font-100">
+                    £17.00
+                  </span>
                 </div>
               </div>
               <div className="w-39.3 h-full bg-gray-100">
                 <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
-                  <img src={TheOneWhatsNew} alt="opt" className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" />
+                  <img
+                    src={TheOneWhatsNew}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
                   <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
                     New
                   </span>
@@ -300,19 +329,208 @@ const Home = () => {
                 <div className="w-full h-5 py-0 px-2.5"></div>
                 <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
                   <div className="flex justify-end items-center">
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={FullStar} className="w-5 h-5"/>
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5"/>
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
                   </div>
                   <span className="text-12 text-gray-700">(1)</span>
                 </div>
-                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">THE ONES</p>
-                <div className="h-10 text-14 text-gray-900 font-400">5 in 1 Wonder Lash Prom Queen Mascara - Black</div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  THE ONES
+                </p>
+                <div className="h-10 text-14 text-gray-900 font-400">
+                  5 in 1 Wonder Lash Prom Queen Mascara - Black
+                </div>
                 <div className="h-5 flex items-center gap-4 mt-3">
                   <p className="text-orange-600 font-500">£6.99</p>
-                  <span className="line-through text-gray-400 font-100">£13.00</span>
+                  <span className="line-through text-gray-400 font-100">
+                    £13.00
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* icons of our time */}
+      <div className="w-full flex justify-center mb-15">
+        <div className="w-[1346px] h-full mx-22">
+          <div className="h-27 felx justify-center items-center relative mb-4">
+            <div className="w-[600px] h-full flex-col items-center justify-between mx-auto">
+              <h3 className="text-40 font-700 text-gray-800 flex justify-center items-center mb-3">
+                Icons of our time
+              </h3>
+              <p className="text-center text-gray-700 font-100">
+                Say hello to our legendary products—iconic essentials you trust
+                and reach for again and again. Discover the time-tested
+                favourites our customers love most.
+              </p>
+            </div>
+            <button
+              type="btn"
+              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute right-0 bottom-0 font-500 leading-3"
+            >
+              View all
+            </button>
+          </div>
+          <div className="flex justify-between items-center h-[455px] gap-5">
+            <img
+              src={IconOfOurTime}
+              alt=""
+              className="w-1/5 h-full rounded-md"
+            />
+            <div className="w-4/5 h-full grid grid-cols-4 gap-x-3">
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={TheOneWhatsNew}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
+                    New
+                  </span>
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" onMouseEnter={()=>{
+                      
+                    }}/>
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(1)</span>
+                </div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  THE ONES
+                </p>
+                <div className="h-10 text-14 text-gray-900 font-400">
+                  5 in 1 Wonder Lash Prom Queen Mascara - Black
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£6.99</p>
+                  <span className="line-through text-gray-400 font-100">
+                    £13.00
+                  </span>
+                </div>
+              </div>
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={MilkandHoney}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" />
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(672)</span>
+                </div>
+                <p className=" text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  MILK & HONEY GOLD
+                </p>
+                <div className=" text-14 text-gray-900 font-400">
+                  Nourishing Hand & Body Cream
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£12.99</p>
+                </div>
+              </div>
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={TenderCare}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" />
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(517)</span>
+                </div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  TTENDER CARE
+                </p>
+                <div className=" text-14 text-gray-900 font-400">
+                  Sweet Mandarin Multi-purpose Balm
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£8.50</p>
+                </div>
+              </div>
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={RoyalVelvet}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" />
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(561)</span>
+                </div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  THE ONES
+                </p>
+                <div className="h-10 text-14 text-gray-900 font-400">
+                  5 in 1 Wonder Lash Prom Queen Mascara - Black
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£6.99</p>
+                  <span className="line-through text-gray-400 font-100">
+                    £13.00
+                  </span>
                 </div>
               </div>
             </div>
