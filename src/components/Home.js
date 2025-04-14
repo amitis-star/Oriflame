@@ -10,6 +10,8 @@ import StoreIcon from "../assests/svg/store.svg";
 import Heart from "../assests/svg/heart.svg";
 import FullStar from "../assests/svg/full-star.svg";
 import EmptyStar from "../assests/svg/empty-star.svg";
+import BlackStore from "../assests/svg/black-store.svg";
+import PinkHeart from "../assests/svg/pink-heart.svg";
 import FlowerSwiper from "../assests/images/flower-cream-swiper.webp";
 import NovageSwiper from "../assests/images/novage-swiper.webp";
 import OptSwiper from "../assests/images/opt-swiper.webp";
@@ -21,11 +23,20 @@ import IconOfOurTime from "../assests/images/icon of our time.webp";
 import MilkandHoney from "../assests/images/milk and honey gold.webp";
 import TenderCare from "../assests/images/tender care.webp";
 import RoyalVelvet from "../assests/images/royal velvet.webp";
+import BestOfferCover from "../assests/images/best offer cover.webp"
+import AmberElixer from "../assests/images/amber elixer.webp";
+import FacialOil from "../assests/images/facial oil.webp";
+import LipBalm from "../assests/images/lip balm.webp";
+import Possess from "../assests/images/possess.webp"
+import { FaRegHeart } from "react-icons/fa";
 
 const Home = () => {
   const inputRef = useRef(null);
 
   const [isTyping, setIsTyping] = useState(false);
+
+  const [isStoreHovered, setIsStoreHovered] = useState(false);
+  const [isHeartHovered, setIsHeartHovered] = useState(false);
 
   const handleClear = () => {
     inputRef.current.value = "";
@@ -392,13 +403,27 @@ const Home = () => {
                   <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
                     New
                   </span>
-                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
-                    <img src={StoreIcon} alt="store" className="w-7 h-7" onMouseEnter={()=>{
-                      
-                    }}/>
+                  <div
+                    className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl"
+                    onMouseEnter={() => setIsStoreHovered(true)}
+                    onMouseLeave={() => setIsStoreHovered(false)}
+                  >
+                    <img
+                      src={isStoreHovered ? BlackStore : StoreIcon}
+                      alt="store"
+                      className="w-7 h-7 transition-colors duration-300"
+                    />
                   </div>
-                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
-                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                  <div
+                    className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl"
+                    onMouseEnter={() => setIsHeartHovered(true)}
+                    onMouseLeave={() => setIsHeartHovered(false)}
+                  >
+                    <img
+                      src={isHeartHovered ? PinkHeart : Heart}
+                      alt="heart"
+                      className="w-7 h-7 transition-colors duration-300"
+                    />
                   </div>
                 </div>
                 <div className="w-full h-5 py-0 px-2.5"></div>
@@ -436,7 +461,7 @@ const Home = () => {
                     <img src={StoreIcon} alt="store" className="w-7 h-7" />
                   </div>
                   <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
-                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                    <FaRegHeart size={24} className="hover:text-red-900" />
                   </div>
                 </div>
                 <div className="w-full h-5 py-0 px-2.5"></div>
@@ -532,6 +557,212 @@ const Home = () => {
                     £13.00
                   </span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* best offers */}
+      <div className="w-full flex justify-center mb-15">
+        <div className="w-[1346px] h-full mx-22">
+          <div className=" felx justify-center items-center relative mb-4">
+            <div className="w-[600px] h-full flex-col items-center justify-between mx-auto">
+              <h3 className="text-40 font-700 text-gray-800 flex justify-center items-center mb-3">
+                Best offers
+              </h3>
+            </div>
+            <button
+              type="btn"
+              className="w-27 h-11 rounded-full py-3 px-8 text-black text-14 border-gray-800 border-solid border-2 absolute bottom-0 font-500 leading-3"
+            >
+              View all
+            </button>
+          </div>
+          <div className="flex justify-between items-center h-[455px] gap-5">
+            <div className="w-4/5 h-full grid grid-cols-4 gap-x-3">
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={Possess}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div
+                    className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl"
+                    onMouseEnter={() => setIsStoreHovered(true)}
+                    onMouseLeave={() => setIsStoreHovered(false)}
+                  >
+                    <img
+                      src={isStoreHovered ? BlackStore : StoreIcon}
+                      alt="store"
+                      className="w-7 h-7 transition-colors duration-300"
+                    />
+                  </div>
+                  <div
+                    className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl"
+                    onMouseEnter={() => setIsHeartHovered(true)}
+                    onMouseLeave={() => setIsHeartHovered(false)}
+                  >
+                    <img
+                      src={isHeartHovered ? PinkHeart : Heart}
+                      alt="heart"
+                      className="w-7 h-7 transition-colors duration-300"
+                    />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(352)</span>
+                </div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                    possess
+                </p>
+                <div className=" text-14 text-gray-900 font-400">
+                  Absolute Eau de Parfum
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£27.99</p>
+                  <span className="line-through text-gray-400 font-100">
+                    £47.00
+                  </span>
+                </div>
+              </div>
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={LipBalm}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" />
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <FaRegHeart size={24} className="hover:text-red-900" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(1652)</span>
+                </div>
+                <p className=" text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  TENDER CARE
+                </p>
+                <div className=" text-14 text-gray-900 font-400">
+                  Natural Multi-purpose Balm
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                <p className="text-orange-600 font-500">£3.49</p>
+                  <span className="line-through text-gray-400 font-100">
+                    £8.50
+                  </span>
+                </div>
+              </div>
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={FacialOil}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" />
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(482)</span>
+                </div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  NOVAGE +
+                </p>
+                <div className=" text-14 text-gray-900 font-400">
+                  Intense Nourishment Facial Oil Capsules
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£24.99</p>
+                  <span className="line-through text-gray-400 font-100">
+                    £50.00
+                  </span>
+                </div>
+              </div>
+              <div className="h-full bg-gray-100">
+                <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                  <img
+                    src={AmberElixer}
+                    alt="opt"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                  />
+                  <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={StoreIcon} alt="store" className="w-7 h-7" />
+                  </div>
+                  <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                    <img src={Heart} alt="heart" className="w-7 h-7" />
+                  </div>
+                </div>
+                <div className="w-full h-5 py-0 px-2.5"></div>
+                <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                  <div className="flex justify-end items-center">
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
+                  </div>
+                  <span className="text-12 text-gray-700">(561)</span>
+                </div>
+                <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                  AMBER ELIXER
+                </p>
+                <div className=" text-14 text-gray-900 font-400">
+                  Eau de Parfum
+                </div>
+                <div className="h-5 flex items-center gap-4 mt-3">
+                  <p className="text-orange-600 font-500">£6.99</p>
+                  <span className="line-through text-gray-400 font-100">
+                    £13.00
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="relative w-1/5 h-full">
+              <img
+                src={BestOfferCover}
+                alt=""
+                className="h-full rounded-md"
+              />
+              <div className="w-full h-35 absolute py-7.5 px-10 bottom-0 flex flex-col justify-between gap-y-2">
+                <p className="w-33 h-20 text-center text-30 mb-1 font-500 text-gray-100">BEST RIGHT NOW</p>
+                <button
+                type="btn"
+                className="w-33 h-12 bg-black rounded-full text-gray-100 font-500 text-16"
+                >
+                  SEIZE THE DEALS
+                </button>
               </div>
             </div>
           </div>
