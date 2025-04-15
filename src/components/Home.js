@@ -33,6 +33,8 @@ import TheOneBrand from "../assests/images/the one.webp";
 import GiordaniGoldBrand from "../assests/images/giordani gold.webp";
 import NoageBrand from "../assests/images/novage.webp";
 import WillosophyBrand from "../assests/images/wllosophy.webp";
+import WellosphyRed from "../assests/images/wellosphy red.webp";
+import WellosphyGreen from "../assests/images/willosphy green.webp";
 import { FaRegHeart } from "react-icons/fa";
 
 const Home = () => {
@@ -794,7 +796,7 @@ const Home = () => {
       </div>
       {/* swiper oriflame on me */}
       <div className="mt-10 mb-10 bg-purple-800 h-3 w-full"></div>
-      {/* healtier gut, happier day */}
+      {/* healthier gut, happier day */}
       <div className="w-full flex justify-center mb-15">
         <div className="w-[1346px] h-full mx-22">
           <div className=" felx justify-center items-center relative mb-10">
@@ -836,13 +838,10 @@ const Home = () => {
               <div className="h-full  bg-gray-100">
                 <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer m-auto">
                   <img
-                    src={TheOneWhatsNew}
+                    src={WellosphyRed}
                     alt="opt"
                     className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                   />
-                  <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
-                    New
-                  </span>
                   <div
                     className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl"
                     onMouseEnter={() => setIsStoreHovered(true)}
@@ -873,27 +872,27 @@ const Home = () => {
                     <img alt="star-full" src={FullStar} className="w-5 h-5" />
                     <img alt="star-full" src={FullStar} className="w-5 h-5" />
                     <img alt="star-full" src={FullStar} className="w-5 h-5" />
-                    <img alt="star-full" src={EmptyStar} className="w-5 h-5" />
+                    <img alt="star-full" src={FullStar} className="w-5 h-5" />
                   </div>
-                  <span className="text-12 text-gray-700">(1)</span>
+                  <span className="text-12 text-gray-700">(427)</span>
                 </div>
                 <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
-                  THE ONES
+                  WELLOSPHY
                 </p>
-                <div className="h-10 text-14 text-gray-900 font-400">
-                  5 in 1 Wonder Lash Prom Queen Mascara - Black
+                <div className="text-14 text-gray-900 font-400">
+                  Astaxanthin & Bilberry Extract
                 </div>
                 <div className="h-5 flex items-center gap-4 mt-3">
-                  <p className="text-orange-600 font-500">£6.99</p>
+                  <p className="text-orange-600 font-500">£19.99</p>
                   <span className="line-through text-gray-400 font-100">
-                    £13.00
+                    £24.99
                   </span>
                 </div>
               </div>
               <div className="h-full  bg-gray-100">
                 <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer m-auto">
                   <img
-                    src={MilkandHoney}
+                    src={WellosphyGreen}
                     alt="opt"
                     className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                   />
@@ -913,16 +912,16 @@ const Home = () => {
                     <img alt="star-full" src={FullStar} className="w-5 h-5" />
                     <img alt="star-full" src={FullStar} className="w-5 h-5" />
                   </div>
-                  <span className="text-12 text-gray-700">(672)</span>
+                  <span className="text-12 text-gray-700">(152)</span>
                 </div>
                 <p className=" text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
-                  MILK & HONEY GOLD
+                  WELLOSPHY
                 </p>
                 <div className=" text-14 text-gray-900 font-400">
-                  Nourishing Hand & Body Cream
+                  Prebiotic Fibre Drink
                 </div>
                 <div className="h-5 flex items-center gap-4 mt-3">
-                  <p className="text-orange-600 font-500">£12.99</p>
+                  <p className="text-orange-600 font-500">£13.99</p>
                 </div>
               </div>
             </div>
