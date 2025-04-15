@@ -12,6 +12,7 @@ import FullStar from "../assests/svg/full-star.svg";
 import EmptyStar from "../assests/svg/empty-star.svg";
 import BlackStore from "../assests/svg/black-store.svg";
 import PinkHeart from "../assests/svg/pink-heart.svg";
+import Email from "../assests/svg/email.svg";
 import FlowerSwiper from "../assests/images/flower-cream-swiper.webp";
 import NovageSwiper from "../assests/images/novage-swiper.webp";
 import OptSwiper from "../assests/images/opt-swiper.webp";
@@ -928,6 +929,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* body end */}
+      {/* footer start */}
       {/* reach your happy place */}
       <div className="w-full h-55 py-12.5 px-4 flex flex-col justify-between gap-y-5 items-center">
         <h3 className="text-40 text-gray-700 font-700">
@@ -980,7 +983,14 @@ const Home = () => {
           LEARN HOW
         </button>
       </div>
-      {/* body end */}
+      {/* subscribe */}
+      <div className="h-14 bg-purpl-400 p-4 mt-10 flex items-center justify-center gap-2.5 text-gray-700 bg-emerald-200">
+        <img alt="email" src={Email} />
+        <p className="text-16 font-700">
+          Subscribe to our newsletter for inspiration & news!
+        </p>
+      </div>
+      {/* footer end */}
     </div>
     // end
   );
