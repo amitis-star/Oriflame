@@ -13,6 +13,9 @@ import EmptyStar from "../assests/svg/empty-star.svg";
 import BlackStore from "../assests/svg/black-store.svg";
 import PinkHeart from "../assests/svg/pink-heart.svg";
 import Email from "../assests/svg/email.svg";
+import OriflameApp1 from "../assests/svg/oriflame app 1.svg";
+import OriflameApp2 from "../assests/svg/oriflame app 2.svg";
+import OriflameApp3 from "../assests/svg/oriflame app 3.svg";
 import FlowerSwiper from "../assests/images/flower-cream-swiper.webp";
 import NovageSwiper from "../assests/images/novage-swiper.webp";
 import OptSwiper from "../assests/images/opt-swiper.webp";
@@ -984,11 +987,78 @@ const Home = () => {
         </button>
       </div>
       {/* subscribe */}
-      <div className="h-14 bg-purpl-400 p-4 mt-10 flex items-center justify-center gap-2.5 text-gray-700 bg-emerald-200">
+      <div className="h-14 bg-purpl-400 p-4 mt-10 flex items-center justify-center gap-2.5 text-gray-800 bg-emerald-200">
         <img alt="email" src={Email} />
-        <p className="text-16 font-700">
+        <p className="text-16 font-600">
           Subscribe to our newsletter for inspiration & news!
         </p>
+      </div>
+      {/* cards in footer */}
+      <div className="h-45 mb-7.5 py-7.5 bg-gray-100 flex justify-center items-center">
+        <div className="w-[984px] h-40 flex justify-center items-center gap-2">
+          <div className="w-1/4 h-full flex flex-col items-center">
+            <div className=" flex flex-col items-center gap-5">
+              <p className="text-gray-800 font-700 text-14">SUPPORT/HELP</p>
+              <div className="flex flex-col items-start justify-evenly gap-4">
+                <p className="text-14 font-400 text-gray-600">Support Center</p>
+                <p className="text-14 font-400 text-gray-600">Contact Us</p>
+                <p className="text-14 font-400 text-gray-600">
+                  Track your order
+                </p>
+                <p className="text-14 font-400 text-gray-600">
+                  Claims & returns
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 h-full flex flex-col items-center">
+            <div className=" flex flex-col gap-5">
+              <p className="text-gray-800 font-700 text-14">CORPORATE INFO</p>
+              <div className="flex flex-col items-start justify- stretch gap-4">
+                <p className="text-14 font-400 text-gray-600">Work With Us</p>
+                <p className="text-14 font-400 text-gray-600">
+                  Reach Your Happy Place
+                </p>
+                <p className="text-14 font-400 text-gray-600">Sustainability</p>
+                <p className="text-14 font-400 text-gray-600">
+                  Investor Relations
+                </p>
+                <p className="text-14 font-400 text-gray-600">Oriflame.com</p>
+                <p className="text-14 font-400 text-gray-600">
+                  EU Declarations of Conformity
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 h-full flex flex-col items-center">
+            <div className=" flex flex-col gap-5">
+              <p className="text-gray-800 font-700 text-14">DISCOVER</p>
+              <div className="flex flex-col items-start justify-evenly gap-4">
+                <p className="text-14 font-400 text-gray-600">
+                  Join us as a Brand Partner
+                </p>
+                <p className="text-14 font-400 text-gray-600">
+                  Join us as a VIP Customer
+                </p>
+                <p className="text-14 font-400 text-gray-600">eCatalogue</p>
+              </div>
+            </div>
+          </div>
+          <div className="w-1/4 h-full flex flex-col items-center justify-start gap-2">
+            <h5 className="text-25 text-gray-900 font-600">Our apps</h5>
+            <div className="flex justify-between items-center gap-3">
+              <img src={OriflameApp1} alt="oriflame app" className="w-9 h-9" />
+              <img src={OriflameApp2} alt="oriflame app" className="w-9 h-9" />
+              <img src={OriflameApp3} alt="oriflame app" className="w-9 h-9" />
+            </div>
+            <a
+              href="..."
+              className="underline font-600 text-gray-700 hover:text-emerald-600"
+            >
+              Read more & download
+            </a>
+          </div>
+        </div>
       </div>
       {/* footer end */}
     </div>
