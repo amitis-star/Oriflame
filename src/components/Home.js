@@ -16,6 +16,13 @@ import Email from "../assests/svg/email.svg";
 import OriflameApp1 from "../assests/svg/oriflame app 1.svg";
 import OriflameApp2 from "../assests/svg/oriflame app 2.svg";
 import OriflameApp3 from "../assests/svg/oriflame app 3.svg";
+import FaceBook from "../assests/svg/facebook.svg";
+import YouTube from "../assests/svg/youtube.svg";
+import Instagram from "../assests/svg/insta.svg";
+import Visa from "../assests/svg/visa.svg";
+import CirclePay from "../assests/svg/circles-pay.svg";
+import PayPal from "../assests/svg/paypal.svg";
+import GPay from "../assests/svg/gpay.svg";
 import FlowerSwiper from "../assests/images/flower-cream-swiper.webp";
 import NovageSwiper from "../assests/images/novage-swiper.webp";
 import OptSwiper from "../assests/images/opt-swiper.webp";
@@ -1058,6 +1065,42 @@ const Home = () => {
               Read more & download
             </a>
           </div>
+        </div>
+      </div>
+      {/* follow us */}
+      <div className="mb-7.5 flex flex-col justify-evenly items-center gap-8 ">
+        <div className="flex flex-col gap-3">
+          <h5 className="text-25 text-center text-gray-800 font-600">
+            Follow Us
+          </h5>
+          <div className="flex justify-between items-center gap-3">
+            <img src={FaceBook} alt="facebook" className="w-9 h-9" />
+            <img src={YouTube} alt="youtube" className="w-9 h-9" />
+            <img src={Instagram} alt="insta" className="w-9 h-9" />
+          </div>
+        </div>
+        <div className="w-[600px]">
+          <p className="text-center text-14 font-400 text-gray-600">
+            Oriflame is a leading beauty company selling direct. We are present
+            in more than 60 countries, of which we are the market leader in more
+            than a half. Oriflame has its origin in Sweden with corporate
+            offices in Switzerland. We offer a wide range of high-quality beauty
+            products as well as a unique opportunity to join our sales force and
+            start your own business.
+          </p>
+        </div>
+        <div className="w-[530px]">
+          <p className="text-center text-gray-600 text-14 font-400">Copyright © 2025 Oriflame Cosmetics Global SA. All rights reserved.</p>
+          <div className="flex items-center justify-between">
+            <p className="underline cursor-pointer text-gray-600 text-14 font-400">Terms and Conditions for VIP Customers</p>
+            <p className="underline cursor-pointer text-gray-600 text-14 font-400">Terms and Conditions for Brand Partners</p>
+          </div>
+        </div>
+        <div className="flex justify-between gap-5">
+          <img src={Visa} alt="visa"/>
+          <img src={CirclePay} alt="circlepay"/>
+          <img src={PayPal} alt="paypal"/>
+          <img src={GPay} alt="gpay"/>
         </div>
       </div>
       {/* footer end */}
