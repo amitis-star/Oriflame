@@ -3,6 +3,8 @@ import { useRef } from "react";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/autoplay";
+import { Navigation } from "swiper/modules";
+import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import logo from "../assests/svg/oriflame logo.svg";
 import SearchIcon from "../assests/svg/search.svg";
@@ -23,6 +25,8 @@ import Visa from "../assests/svg/visa.svg";
 import CirclePay from "../assests/svg/circles-pay.svg";
 import PayPal from "../assests/svg/paypal.svg";
 import GPay from "../assests/svg/gpay.svg";
+import Prev from "../assests/svg/btn-prev.svg";
+import Next from "../assests/svg/btn-next.svg";
 import FlowerSwiper from "../assests/images/flower-cream-swiper.webp";
 import NovageSwiper from "../assests/images/novage-swiper.webp";
 import OptSwiper from "../assests/images/opt-swiper.webp";
@@ -46,10 +50,25 @@ import NoageBrand from "../assests/images/novage.webp";
 import WillosophyBrand from "../assests/images/wllosophy.webp";
 import WellosphyRed from "../assests/images/wellosphy red.webp";
 import WellosphyGreen from "../assests/images/willosphy green.webp";
+import One from "../assests/images/oriflame on me/1.jpg";
+import Two from "../assests/images/oriflame on me/2.jpg";
+import Three from "../assests/images/oriflame on me/3.jpg";
+import Four from "../assests/images/oriflame on me/4.jpg";
+import Five from "../assests/images/oriflame on me/5.jpg";
+import Six from "../assests/images/oriflame on me/6.jpg";
+import Seven from "../assests/images/oriflame on me/7.jpg";
+import Eight from "../assests/images/oriflame on me/8.jpg";
+import Nine from "../assests/images/oriflame on me/9.jpg";
+import Ten from "../assests/images/oriflame on me/10.jpg";
+import Eleven from "../assests/images/oriflame on me/11.jpg";
+import Twelve from "../assests/images/oriflame on me/12.jpg";
 import { FaRegHeart } from "react-icons/fa";
 
 const Home = () => {
   const inputRef = useRef(null);
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
   const [isTyping, setIsTyping] = useState(false);
 
@@ -806,7 +825,243 @@ const Home = () => {
         </div>
       </div>
       {/* swiper oriflame on me */}
-      <div className="mt-10 mb-10 bg-purple-800 h-3 w-full"></div>
+      <div className="mt-10 mb-10 h-71 w-full pl-10 relative">
+        <Swiper
+          slidesPerView={5}
+          spaceBetween={30}
+          modules={[Navigation]}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+          }}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="w-41 h-71 flex items-center justify-center cursor-pointer relative group overflow-hidden">
+              <div className="w-41 h-41 relative">
+                <img
+                  src={One}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex flex-col items-center justify-center cursor-pointer gap-7.5">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Two}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Three}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex  items-start justify-center cursor-pointer pt-10">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Four}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex items-end justify-center cursor-pointer pb-10">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Five}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex items-center justify-center cursor-pointer">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Six}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex flex-col items-center justify-center cursor-pointer gap-7.5">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Eleven}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Twelve}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex  items-start justify-center cursor-pointer pt-10">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={One}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex items-end justify-center cursor-pointer pb-10">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Two}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex  items-start justify-center cursor-pointer pt-10">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Three}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex flex-col items-center justify-center cursor-pointer gap-7.5">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Four}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Five}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-center"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="w-41 h-71 flex  items-start justify-center cursor-pointer pt-10">
+              <div className="w-41 h-41 bg-rose-300 overflow-hidden relative group">
+                <img
+                  src={Six}
+                  alt="orifalme"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className=" w-full h-full absolute inset-0 bg-gray-700 bg-opacity-0 group-hover:bg-opacity-50 flex justify-center items-center transition duration-300">
+                  <span className="text-gray-300 text-8 opacity-0 group-hover:opacity-100 transition duration-300">
+                    @Oriflame
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <button
+            ref={prevRef}
+            className="w-11 h-11 rounded-full absolute bottom-0 left-0 z-10 bg-white p-2.5 cursor-pointer"
+          >
+            <img src={Prev} alt="prev btn" />
+          </button>
+          <button
+            ref={nextRef}
+            className="w-11 h-11 rounded-full absolute bottom-0 right-5 z-10 bg-white p-2.5 cursor-pointer"
+          >
+            <img src={Next} alt="next btn" />
+          </button>
+        </Swiper>
+      </div>
       {/* healthier gut, happier day */}
       <div className="w-full flex justify-center mb-15">
         <div className="w-[1346px] h-full mx-22">
@@ -1090,17 +1345,23 @@ const Home = () => {
           </p>
         </div>
         <div className="w-[530px]">
-          <p className="text-center text-gray-600 text-14 font-400">Copyright © 2025 Oriflame Cosmetics Global SA. All rights reserved.</p>
+          <p className="text-center text-gray-600 text-14 font-400">
+            Copyright © 2025 Oriflame Cosmetics Global SA. All rights reserved.
+          </p>
           <div className="flex items-center justify-between">
-            <p className="underline cursor-pointer text-gray-600 text-14 font-400">Terms and Conditions for VIP Customers</p>
-            <p className="underline cursor-pointer text-gray-600 text-14 font-400">Terms and Conditions for Brand Partners</p>
+            <p className="underline cursor-pointer text-gray-600 text-14 font-400">
+              Terms and Conditions for VIP Customers
+            </p>
+            <p className="underline cursor-pointer text-gray-600 text-14 font-400">
+              Terms and Conditions for Brand Partners
+            </p>
           </div>
         </div>
         <div className="flex justify-between gap-5">
-          <img src={Visa} alt="visa"/>
-          <img src={CirclePay} alt="circlepay"/>
-          <img src={PayPal} alt="paypal"/>
-          <img src={GPay} alt="gpay"/>
+          <img src={Visa} alt="visa" />
+          <img src={CirclePay} alt="circlepay" />
+          <img src={PayPal} alt="paypal" />
+          <img src={GPay} alt="gpay" />
         </div>
       </div>
       {/* footer end */}
