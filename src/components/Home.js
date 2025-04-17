@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useRef } from "react";
+import axios from "axios";
+import { useEffect, useRef } from "react";
 import { useState } from "react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -67,6 +68,7 @@ const Home = () => {
   const nextRef = useRef(null);
 
   const [isTyping, setIsTyping] = useState(false);
+  const [data, setData] = useState([]);
 
   const [isStoreHovered, setIsStoreHovered] = useState(false);
   const [isHeartHovered, setIsHeartHovered] = useState(false);
@@ -83,6 +85,24 @@ const Home = () => {
     setIsTyping(hasText);
     hasText ? xIcon.classList.remove("hidden") : xIcon.classList.add("hidden");
   };
+
+  useEffect(() => {
+    const GETphoto = () => {
+      axios
+        .get("https://jsonplaceholder.typicode.com/photos")
+        .then((response) => {
+          console.log(response.data);
+          
+          setData(response.data);
+        })
+        .catch((error) => {
+         
+          console.error("Error:", error);
+        });
+    };
+
+    GETphoto();
+  }, []);
 
   return (
     // start
@@ -126,8 +146,8 @@ const Home = () => {
           </Swiper>
         </div>
         {/* menu-top */}
-        <div className="w-full h-16 flex items-center gap-x-10 mx-11">
-          <div className="w-1/6 h-11 flex items-center justify-between">
+        <div className="w-full h-16 flex items-center mx-11">
+          <div className="w-1/6 h-11 flex items-center gap-6">
             <div className="w-8 h-9 flex flex-col items-center justify-center text-center">
               <div className="w-6 h-0.1 bg-gray-700 mb-2"></div>
               <div className="w-6 h-0.2 bg-gray-700"></div>
@@ -136,7 +156,7 @@ const Home = () => {
             <img src={logo} className="w-28 h-8" alt="logo" />
           </div>
           <div className="w-5/6 h-11 flex justify-between gap-10">
-            <div className="relative z-50 h-full w-4/5 m-auto">
+            <div className="relative z-50 h-full w-3/5">
               <div className="bg-gray-200 h-full w-900 rounded-full flex items-center pl-4">
                 <img src={SearchIcon} alt="search" className="mt-2" />
                 <input
@@ -155,8 +175,8 @@ const Home = () => {
                 </button>
               </div>
             </div>
-            <div className="h-full w-1/5 flex justify-between items-center">
-              <div className="h-6 text-18 font-400 cursor-pointer">join us</div>
+            <div className="h-full w-2/5 flex justify-center gap-10 items-center">
+              <div className="h-6 text-18 font-400 cursor-pointer ml-20">join us</div>
               <div className="h-6 text-18 font-400 cursor-pointer">sign in</div>
               <div className="w-11 h-11 p-1.5 cursor-pointer">
                 <img src={StoreIcon} alt="store" className="" />
@@ -280,7 +300,76 @@ const Home = () => {
                 </button>
               </div>
               <div className="h-full w-[721px] flex justify-between items-center">
-                <div className="w-39.3 h-full bg-gray-100">
+                {data.splice(2, 3).map((item) => {
+                  return (
+                    <div className="w-39.3 h-full bg-gray-100">
+                      <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
+                        <img
+                          src={item.thumbnailUrl}
+                          alt="opt"
+                          className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+                        />
+                        <span className="absolute w-14 h-8 bg-emerald-200 opacity-90 px-3 m-auto rounded-md leading-[32px] text-16 font-500 text-gray-800 top-2 left-2">
+                          New
+                        </span>
+                        <div className="absolute w-11 h-11 bg-white bottom-2 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                          <img
+                            src={StoreIcon}
+                            alt="store"
+                            className="w-7 h-7"
+                          />
+                        </div>
+                        <div className="absolute w-11 h-11 bg-white bottom-16 right-2 rounded-full flex justify-center items-center p-1.5 shadow-xl">
+                          <img src={Heart} alt="heart" className="w-7 h-7" />
+                        </div>
+                      </div>
+                      <div className="w-full h-5 py-0 px-2.5"></div>
+                      <div className="w-full h-5 flex justify-start items-center gap-2 mb-2">
+                        <div className="flex justify-end items-center">
+                          <img
+                            alt="star-full"
+                            src={FullStar}
+                            className="w-5 h-5"
+                          />
+                          <img
+                            alt="star-full"
+                            src={FullStar}
+                            className="w-5 h-5"
+                          />
+                          <img
+                            alt="star-full"
+                            src={FullStar}
+                            className="w-5 h-5"
+                          />
+                          <img
+                            alt="star-full"
+                            src={FullStar}
+                            className="w-5 h-5"
+                          />
+                          <img
+                            alt="star-full"
+                            src={EmptyStar}
+                            className="w-5 h-5"
+                          />
+                        </div>
+                        <span className="text-12 text-gray-700">(1)</span>
+                      </div>
+                      <p className="h-4 text-gray-600 flex justify-start items-center text-12 font-100 mb-3">
+                        OPTIMALS
+                      </p>
+                      <div className="h-10 text-14 text-gray-900 font-400">
+                        Opt Optimals Daily Glow Multi-Protector SPF50
+                      </div>
+                      <div className="h-5 flex items-center gap-4 mt-3">
+                        <p className="text-orange-600 font-500">£12.99</p>
+                        <span className="line-through text-gray-400 font-100">
+                          £20.00
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+                {/* <div className="w-39.3 h-full bg-gray-100">
                   <div className="group overflow-hidden w-39.3 h-39.3 relative cursor-pointer">
                     <img
                       src={OptWhatsNew}
@@ -430,7 +519,7 @@ const Home = () => {
                       £13.00
                     </span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
