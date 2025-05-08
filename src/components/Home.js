@@ -60,6 +60,8 @@ import Six from "../assests/images/oriflame on me/6.jpg";
 import Eleven from "../assests/images/oriflame on me/11.jpg";
 import Twelve from "../assests/images/oriflame on me/12.jpg";
 import { FaRegHeart } from "react-icons/fa";
+import { Karim } from "./Icons";
+import { IoIosHeart } from "react-icons/io";
 
 const Home = () => {
   const inputRef = useRef(null);
@@ -111,7 +113,7 @@ const Home = () => {
         {/* header start */}
         {isTyping && (
           <div
-            className={`fixed w-full h-full bg-zinc-900 z-40 box-border pointer-events-none transition-opacity duration-[5000ms] delay-[2000ms] ${
+            className={`fixed w-full h-full backdrop-blur-[2px] bg-black/40 z-40 box-border pointer-events-none transition-opacity duration-[5000ms] delay-[2000ms] ${
               isTyping ? "opacity-70" : "opacity-0"
             }`}
           />
@@ -1519,6 +1521,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Karim/>
+      <IoIosHeart className="hover:fill-rose-600" />
     </>
     // end
   );
